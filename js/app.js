@@ -68,7 +68,7 @@ const displayNews = async (allNews) => {
                 </div>
                 <div class="flex gap-4 items-center">
                     <i class="fa-regular fa-eye"></i>
-                    <p>${news.total_view ? news.total_view : 'No Data Available'}</p>
+                    <p>${news.total_view ? news.total_view + 'M' : 'No Data Available'}</p>
                 </div>
                 <div onclick="newsDetails('${news._id}')" class="card-actions justify-end">
                 <!-- The button to open modal -->
@@ -86,8 +86,31 @@ const displayNews = async (allNews) => {
 const newsDetails = async (news_id) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/${news_id}`);
     const data = await res.json();
-    console.log(data.data[0]);
+    displayNewsDetails(data.data[0]);
 }
+
+const displayNewsDetails = (details) => {
+    const newsDetailsModalSection = document.getElementById('modal-details');
+    newsDetailsModalSection.innerHTML = '';
+    newsDetailsModalSection.innerHTML = `
+    <figure><img class="w-full h-full" src="${details.image_url}" alt="Album"></figure>
+    <h3 class="text-lg font-bold mt-4">${details.title}</h3>
+        <p class="py-4">${details.details}
+    <p class="py-4 text-center"> Author: <img src=" ${details.author.img
+        }" class="w-10 rounded-full block mx-auto">
+    </p>
+    <p class="text-yellow-400 text-center">
+    ${details.author.name === null
+            ? 'Author Not found'
+            : details.author.name === ''
+                ? 'Author Not found'
+                : details.author.name
+        }
+    </p>
+    `;
+
+}
+
 newsDetails()
 
 const loader = isLoading => {
