@@ -89,7 +89,7 @@ const displayNews = async (allNews) => {
                 </div>
                 <div onclick="newsDetails('${news._id}')" class="card-actions justify-end">
                 <!-- The button to open modal -->
-                <label for="my-modal-4" class="btn glass modal-button text-xl"><i class="fa-sharp fa-solid fa-circle-info"></i></label>
+                <label for="my-modal-4" class="btn glass modal-button text-xl text-blue-500 "><i class="fa-sharp fa-solid fa-circle-info"></i></label>
                 </div >
                 </div >
             </div >
