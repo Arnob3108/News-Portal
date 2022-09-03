@@ -28,7 +28,7 @@
                     </h1>
                 </div>
                 <div class="flex-none">
-                    <ul class="menu menu-horizontal p-0">
+                    <ul class="font-bold text-lg menu menu-horizontal p-0">
                         <li><a>News</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
@@ -61,10 +61,36 @@
         <section class="my-10">
             <div>
                 <ul id="catagory-section"
-                    class="text-center menu menu-horizontal bg-base-100 rounded-box grid lg:grid-cols-8 justify-items-center sm:grid grid-cols-4 sm:gap-10">
+                    class="text-center menu menu-horizontal bg-base-100 rounded-box grid lg:grid-cols-8 justify-items-center sm:grid grid-cols-2 sm:gap-10 text-lg font-bold">
                     <!-- li  -->
                 </ul>
             </div>
+        </section>
+        <section>
+            <div class="flex justify-between">
+                <div class="flex items-center gap-4">
+                    <div>
+                        <h1>Sorted By View</h1>
+                    </div>
+                    <div>
+                        <select class="select select-info w-full max-w-xs">
+                            <option disabled selected>Select language</option>
+                            <option>Breaking News</option>
+                            <option>International News</option>
+                            <option>All News</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex gap-5">
+                    <div>
+                        <button class="btn btn-secondary bg-indigo-500">Today's Pick</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline btn-secondary">Trending</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- total number of news  -->
         <section>

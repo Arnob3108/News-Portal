@@ -27,7 +27,7 @@
                     </h1>
                 </div>
                 <div class="flex-none">
-                    <ul class="menu menu-horizontal p-0">
+                    <ul class="font-bold text-lg menu menu-horizontal p-0">
                         <li><a href="index.html">News</a></li>
                         <li><a>Blog</a></li>
                     </ul>
@@ -53,129 +53,136 @@
             </div>
         </nav>
         <hr class="my-10 border-slate-500">
+    </header>
+    <main>
+        <div class=" text-center">
+            <h1 class="font-bold w-1/5 text-2xl kbd kbd-lg">Click To See The Answer</h1>
+        </div>
+        <!-- Question & Answer section  -->
+        <section>
 
-        <main>
-            <div class=" text-center">
-                <h1 class="font-bold w-1/5 text-2xl kbd kbd-lg">Click To See The Answer</h1>
-            </div>
-            <!-- Question & Answer section  -->
-            <section>
-
-                <div class="text-center">
-                    <!-- The button to open modal -->
-                    <!-- 1st Question with Answer  -->
-                    <label for="my-modal" class=" my-10 btn modal-button text-2xl">Var, Let, and Const – What's the
-                        Difference?</label>
-
-
-                    <input type="checkbox" id="my-modal" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-xl">Var, Let, and Const – What's the Difference?</h3>
-                            <p class="py-4"><span class="text-2xl">Var</span> <br> Before the advent of ES6, var
-                                declarations
-                                ruled. There are issues associated with variables declared with var, though. That is why
-                                it was necessary for new ways to declare variables to emerge. First, let's get to
-                                understand var more before we discuss those issues.</p>
-                            <p class="py-4"><span class="text-2xl">Let</span> <br> let is now preferred for variable
-                                declaration. It's no surprise as it comes as an improvement to var declarations. It also
-                                solves the problem with var that we just covered. Let's consider why this is so.</p>
-                            <p class="py-4"><span class="text-2xl">Const</span> <br>Variables declared with the const
-                                maintain constant values. const declarations share some similarities with let
-                                declarations.</p>
-                            <div class="modal-action">
-                                <label for="my-modal" class="btn">Yay!</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2nd Question with Answer  -->
-                    <label for="my-modal2" class="my-10 btn modal-button text-2xl">What are the differences between
-                        arrow
-                        functions and regular functions in JavaScript?</label>
+            <div class="text-center">
+                <!-- The button to open modal -->
+                <!-- 1st Question with Answer  -->
+                <label for="my-modal" class="pb-14 lg:pb-0 my-10 btn modal-button text-lg lg:text-2xl">Var, Let, and
+                    Const –
+                    What's the
+                    Difference?</label>
 
 
-                    <input type="checkbox" id="my-modal2" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-xl">What are the differences between arrow functions and regular
-                                functions in JavaScript?</h3>
-                            <p class="py-4"><span class="text-2xl">Syntax</span> <br> The first and most obvious
-                                difference between arrow functions and regular functions is their syntax. Not only do
-                                they look different, but arrow functions also provide an implicit return shorthand and
-                                allow parenthesis around a single argument to be omitted.</p>
-                            <ul class="list-disc ml-5">
-                                <li>Syntactical differences</li>
-                                <li>this value (execution context)</li>
-                                <li>Usage as methods</li>
-                                <li>Usage as constructors</li>
-                                <li>arguments binding</li>
-                            </ul>
-                            <div class="modal-action">
-                                <label for="my-modal2" class="btn">Yay!</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 3rd Question with Answer  -->
-                    <label for="my-modal3" class="my-10 btn modal-button text-2xl">What is the Difference between map(),
-                        forEach(), filter(), find()?</label>
-
-
-                    <input type="checkbox" id="my-modal3" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-xl">What is the Difference between map(), forEach(), filter(),
-                                find()?</h3>
-                            <p class="py-4"><span class="text-2xl">Map()</span> <br> .map() executes the same code on
-                                every element in an array and returns a new array with the updated elements.</p>
-                            <p class="py-4"><span class="text-2xl">forEach()</span> <br> .forEach(), is used to execute
-                                the same code on every element in an array but does not change the array and it returns
-                                undefined.</p>
-                            <p class="py-4"><span class="text-2xl">filter()</span> <br>.filter() checks every element in
-                                an array to see if it meets a certain criteria and returns a new array with the elements
-                                that return truthy for the criteria.</p>
-                            <p class="py-4"><span class="text-2xl">find()</span> <br>The find() method is used to find
-                                all the descendant elements of the selected element. It finds the element in the DOM
-                                tree by traversing through the root to leaf.</p>
-                            <div class="modal-action">
-                                <label for="my-modal3" class="btn">Yay!</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 4th Question with Answer  -->
-                    <label for="my-modal4" class="my-10 btn modal-button text-2xl">What is the importance of ES6's
-                        template
-                        strings in JavaScript?</label>
-
-
-                    <input type="checkbox" id="my-modal4" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-xl">What is the importance of ES6's template strings in
-                                JavaScript?</h3>
-                            <p class="py-4"><span class="text-2xl">Template Strings</span> <br> ES6's template strings
-                                is a new way to combine strings. We already have methods such as join(), concat() etc to
-                                combine strings but the template strings method is the most sophisticated because it’s
-                                more readable, no backslash to escape quotes and no more messy plus operators.</p>
-                            <p class="py-4"><span class="text-2xl">Template literals (Template strings)</span>
-                                <br>Template literals are literals delimited with backtick (`) characters, allowing for
-                                multi-line strings, for string interpolation with embedded expressions, and for special
-                                constructs called tagged templates.
-                            </p>
-                            <div class="modal-action">
-                                <label for="my-modal4" class="btn">Yay!</label>
-                            </div>
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-xl">Var, Let, and Const – What's the Difference?</h3>
+                        <p class="py-4"><span class="text-2xl">Var</span> <br> Before the advent of ES6, var
+                            declarations
+                            ruled. There are issues associated with variables declared with var, though. That is why
+                            it was necessary for new ways to declare variables to emerge. First, let's get to
+                            understand var more before we discuss those issues.</p>
+                        <p class="py-4"><span class="text-2xl">Let</span> <br> let is now preferred for variable
+                            declaration. It's no surprise as it comes as an improvement to var declarations. It also
+                            solves the problem with var that we just covered. Let's consider why this is so.</p>
+                        <p class="py-4"><span class="text-2xl">Const</span> <br>Variables declared with the const
+                            maintain constant values. const declarations share some similarities with let
+                            declarations.</p>
+                        <div class="modal-action">
+                            <label for="my-modal" class="btn">Yay!</label>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-    </header>
+                <!-- 2nd Question with Answer  -->
+                <label for="my-modal2" class="pb-28 lg:pb-0 my-10 btn modal-button text-lg lg:text-2xl">What are the
+                    differences
+                    between
+                    arrow
+                    functions and regular functions in JavaScript?</label>
+
+
+                <input type="checkbox" id="my-modal2" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-xl">What are the differences between arrow functions and regular
+                            functions in JavaScript?</h3>
+                        <p class="py-4"><span class="text-2xl">Syntax</span> <br> The first and most obvious
+                            difference between arrow functions and regular functions is their syntax. Not only do
+                            they look different, but arrow functions also provide an implicit return shorthand and
+                            allow parenthesis around a single argument to be omitted.</p>
+                        <ul class="list-disc ml-5">
+                            <li>Syntactical differences</li>
+                            <li>this value (execution context)</li>
+                            <li>Usage as methods</li>
+                            <li>Usage as constructors</li>
+                            <li>arguments binding</li>
+                        </ul>
+                        <div class="modal-action">
+                            <label for="my-modal2" class="btn">Yay!</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd Question with Answer  -->
+                <label for="my-modal3" class="pb-20 lg:pb-0 my-10 btn modal-button text-lg lg:text-2xl">What is the
+                    Difference between map(),
+                    forEach(), filter(), find()?</label>
+
+
+                <input type="checkbox" id="my-modal3" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-xl">What is the Difference between map(), forEach(), filter(),
+                            find()?</h3>
+                        <p class="py-4"><span class="text-2xl">Map()</span> <br> .map() executes the same code on
+                            every element in an array and returns a new array with the updated elements.</p>
+                        <p class="py-4"><span class="text-2xl">forEach()</span> <br> .forEach(), is used to execute
+                            the same code on every element in an array but does not change the array and it returns
+                            undefined.</p>
+                        <p class="py-4"><span class="text-2xl">filter()</span> <br>.filter() checks every element in
+                            an array to see if it meets a certain criteria and returns a new array with the elements
+                            that return truthy for the criteria.</p>
+                        <p class="py-4"><span class="text-2xl">find()</span> <br>The find() method is used to find
+                            all the descendant elements of the selected element. It finds the element in the DOM
+                            tree by traversing through the root to leaf.</p>
+                        <div class="modal-action">
+                            <label for="my-modal3" class="btn">Yay!</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4th Question with Answer  -->
+                <label for="my-modal4" class=" pb-28 lg:pb-0 my-10 btn modal-button text-lg lg:text-2xl">What is
+                    the
+                    importance of ES6's
+                    template
+                    strings in JavaScript?</label>
+
+
+                <input type="checkbox" id="my-modal4" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-xl">What is the importance of ES6's template strings in
+                            JavaScript?</h3>
+                        <p class="py-4"><span class="text-2xl">Template Strings</span> <br> ES6's template strings
+                            is a new way to combine strings. We already have methods such as join(), concat() etc to
+                            combine strings but the template strings method is the most sophisticated because it’s
+                            more readable, no backslash to escape quotes and no more messy plus operators.</p>
+                        <p class="py-4"><span class="text-2xl">Template literals (Template strings)</span>
+                            <br>Template literals are literals delimited with backtick (`) characters, allowing for
+                            multi-line strings, for string interpolation with embedded expressions, and for special
+                            constructs called tagged templates.
+                        </p>
+                        <div class="modal-action">
+                            <label for="my-modal4" class="btn">Yay!</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 <footer class="btm-nav text-center p-4 text-base-content">
     <div>
-        <hr class="mb-5 w-full border-slate-500">
-        <div class="mb-10">
+        <hr class=" w-full border-slate-500">
+        <div class="mt-1 lg:my-3">
             <p>Copyright © 2022 - All right reserved by Weekly News Ltd</p>
         </div>
     </div>
