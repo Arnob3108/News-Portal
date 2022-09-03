@@ -30,12 +30,6 @@ const loadCatagorisNews = async (id) => {
     } catch (error) {
         console.log(error)
     }
-    // console.log(id)
-    loader(true)
-    const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${id}`);
-    const data = await res.json();
-    displayNews(data.data);
-
 }
 // display news section
 const displayNews = async (allNews) => {
@@ -54,7 +48,7 @@ const displayNews = async (allNews) => {
     let totalNumberOfNews = document.getElementById('total-news');
     totalNumberOfNews.innerHTML = `
     <div class="p-3 my-10">
-        <h1>${allNews.length} items available in This category</h1>
+        <h1>${allNews.length} News Available In This Category</h1>
     </div>
     `;
     // sorting by views 
@@ -145,4 +139,5 @@ const loader = isLoading => {
 }
 // catagory loaded by call function
 loadCatagoris()
+loadCatagorisNews('08')
 
