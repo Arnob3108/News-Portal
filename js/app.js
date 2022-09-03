@@ -47,16 +47,24 @@ const displayNews = async (allNews) => {
     else {
         noNewsFound.classList.add('hidden')
     }
-
-    for (const news of allNews) {
-        // console.log(news.title)
-        let totalNumberOfNews = document.getElementById('total-news');
-
-        totalNumberOfNews.innerHTML = `
+    // news in every catagory 
+    let totalNumberOfNews = document.getElementById('total-news');
+    totalNumberOfNews.innerHTML = `
     <div class="p-3 my-10">
         <h1>${allNews.length} items available in This category</h1>
     </div>
     `;
+
+    // sorting by views 
+
+    allNews.sort((a, b) => b.total_view - a.total_view);
+
+    for (const news of allNews) {
+
+
+
+
+
         const newsDiv = document.createElement('div');
         newsDiv.innerHTML = `
         <div class="lg:h-96 my-8 card lg:card-side bg-base-100 shadow-xl hover:shadow-indigo-900/50">
