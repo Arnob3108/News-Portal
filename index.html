@@ -18,7 +18,9 @@
 </head>
 
 <body class=" w-5/6 mx-auto">
+    <!-- header section  -->
     <header>
+        <!-- nav section  -->
         <nav class="mt-5 lg:mx-10">
             <div class="navbar bg-base-100">
                 <div class="flex-1">
@@ -56,6 +58,7 @@
         <hr class="my-10 border-slate-500">
 
     </header>
+    <!-- main section  -->
     <main>
         <!-- catagory section  -->
         <section class="my-10">
@@ -66,8 +69,9 @@
                 </ul>
             </div>
         </section>
+        <!-- Sorted by view section  -->
         <section>
-            <div class="flex justify-between">
+            <div class="flex flex-col lg:flex-row gap-2 lg:gap-0 justify-between items-center">
                 <div class="flex items-center gap-4">
                     <div>
                         <h1>Sorted By View</h1>
@@ -81,12 +85,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="flex gap-5">
+                <div class="flex gap-1 lg:gap-5">
                     <div>
-                        <button class="btn btn-secondary bg-indigo-500">Today's Pick</button>
+                        <button class="btn w-20 lg:w-full btn-secondary bg-indigo-500">Today's Pick</button>
                     </div>
                     <div>
-                        <button class="btn btn-outline btn-secondary">Trending</button>
+                        <button class="btn btn-outline btn-secondary w-20 lg:w-full">Trending</button>
                     </div>
                 </div>
             </div>
@@ -103,6 +107,7 @@
             <div id="news">
                 <!-- news  -->
             </div>
+            <!-- no news found section  -->
             <div id="no-phone-found" class="text-center text-5xl font-bold text-red-600 hidden">
                 <h1>No News Found!!!</h1>
             </div>
@@ -117,7 +122,7 @@
                 </div>
             </div>
         </section>
-        <!-- modal section  -->
+        <!--details modal section  -->
         <section>
             <!-- Put this part before body tag -->
             <input type="checkbox" id="my-modal-4" class="modal-toggle" />
@@ -134,7 +139,8 @@
     <!-- app js added  -->
     <script src="js/app.js"></script>
 </body>
-<footer class="btm-nav text-center p-4 text-base-content">
+<!-- footer section  -->
+<footer class="btm-nav text-center p-4 text-base-content btm-nav-sm">
     <div>
         <hr class=" w-full border-slate-500">
         <div class="my-3">

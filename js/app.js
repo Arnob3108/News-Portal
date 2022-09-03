@@ -1,3 +1,4 @@
+// catagory loading section from api
 const loadCatagoris = async () => {
     try {
         const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
@@ -8,7 +9,7 @@ const loadCatagoris = async () => {
     }
 
 }
-
+// catagory display section
 const displayCatagorys = catagorys => {
     const catagoryList = document.getElementById('catagory-section');
     for (const catagory of catagorys) {
@@ -19,6 +20,7 @@ const displayCatagorys = catagorys => {
     }
 
 }
+// load news from category from api
 const loadCatagorisNews = async (id) => {
     loader(true)
     try {
@@ -35,11 +37,12 @@ const loadCatagorisNews = async (id) => {
     displayNews(data.data);
 
 }
-
+// display news section
 const displayNews = async (allNews) => {
     console.log()
     const newsSection = document.getElementById('news');
     newsSection.textContent = ``;
+    // no news found 
     const noNewsFound = document.getElementById('no-phone-found')
     if (allNews.length === 0) {
         noNewsFound.classList.remove('hidden')
@@ -54,48 +57,41 @@ const displayNews = async (allNews) => {
         <h1>${allNews.length} items available in This category</h1>
     </div>
     `;
-
     // sorting by views 
-
     allNews.sort((a, b) => b.total_view - a.total_view);
-
+    // all news dynamicly
     for (const news of allNews) {
-
-
-
-
-
         const newsDiv = document.createElement('div');
         newsDiv.innerHTML = `
         <div class="lg:h-96 my-8 card lg:card-side bg-base-100 shadow-xl hover:shadow-indigo-900/50">
-            <figure><img class="w-full h-full p-5" src="${news.image_url}" alt="Movie"></figure>
+            <figure><img class="w-96 h-full p-5" src="${news.image_url}" alt="Movie"></figure>
             <div class="card-body">
                 <h2 class="card-title lg:text-3xl mb-5">${news.title}</h2> <br>
                 <p class="text-justify lg:text-lg">${news.details.length > 20 ? news.details.slice(0, 200) + '...' : news.details}</p>
                 <p class="text-justify lg:text-lg">${news.details.length > 20 ? news.details.slice(201, 400) + '...' : news.details}</p>
                 <div class="flex gap-4 mt-5 justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <div class="avatar">
-                        <div
-                            class="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src="${news.author.img}" />
+                    <div class="flex items-center gap-4">
+                        <div class="avatar">
+                            <div
+                                class="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src="${news.author.img}" />
+                            </div>
                         </div>
-                    </div>
                     <div>
-                        <h1>${news.author.name ? news.author.name : 'No Data Available'}</h1>
-                        <p>${news.author.published_date ? news.author.published_date : 'No Data Available'}</p>
+                        <h1>${news.author.name ? news.author.name : 'Author Not found'}</h1>
+                        <p>${news.author.published_date ? news.author.published_date : 'No Date found'}</p>
 
-                    </div>
                 </div>
+            </div>
                 <div class="flex gap-4 items-center">
                     <i class="fa-regular fa-eye"></i>
                     <p>${news.total_view ? news.total_view + 'M' : 'No Data Available'}</p>
                 </div>
                 <div onclick="newsDetails('${news._id}')" class="card-actions justify-end">
                 <!-- The button to open modal -->
-                <label for="my-modal-4" class="btn glass modal-button">Details</label>
+                <label for="my-modal-4" class="btn glass modal-button text-xl"><i class="fa-sharp fa-solid fa-circle-info"></i></label>
                 </div >
-            </div >
+                </div >
             </div >
         </div >
     `;
@@ -103,7 +99,7 @@ const displayNews = async (allNews) => {
     }
     loader(false);
 }
-// modal
+// every news details from api
 const newsDetails = async (news_id) => {
     try {
         const res = await fetch(`https://openapi.programming-hero.com/api/news/${news_id}`);
@@ -113,7 +109,7 @@ const newsDetails = async (news_id) => {
         console.log(error)
     }
 }
-
+// news details showing with modal
 const displayNewsDetails = (details) => {
     const newsDetailsModalSection = document.getElementById('modal-details');
     newsDetailsModalSection.innerHTML = '';
@@ -136,7 +132,7 @@ const displayNewsDetails = (details) => {
 
 }
 
-newsDetails()
+// spinner section
 
 const loader = isLoading => {
     const loaderDiv = document.getElementById('loader');
@@ -147,6 +143,6 @@ const loader = isLoading => {
         loaderDiv.classList.add('hidden')
     }
 }
-
+// catagory loaded by call function
 loadCatagoris()
-// loadCatagorisNews()
+
